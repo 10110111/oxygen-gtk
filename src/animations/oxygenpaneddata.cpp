@@ -60,7 +60,7 @@ namespace Oxygen
             if( GDK_IS_X11_DISPLAY( display ) )
             {
                 const bool vertical( gtk_orientable_get_orientation( GTK_ORIENTABLE( widget ) ) == GTK_ORIENTATION_VERTICAL );
-                _cursor = gdk_cursor_new_from_name( display, vertical ? "col-resize":"row-resize" );
+                _cursor = gdk_cursor_new_from_name( display, vertical ? "row-resize":"col-resize" );
                 _cursorLoaded = true;
             }
 

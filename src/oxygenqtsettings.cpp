@@ -362,7 +362,8 @@ namespace Oxygen
 
         // load icon install prefix
         gchar* path = 0L;
-        if( runCommand( "kde4-config --path config", path ) && path )
+        if( (runCommand("kde4-config --path config", path) ||
+             runCommand( "kf5-config --path config", path)) && path )
         {
 
             out.split( path );
@@ -392,7 +393,8 @@ namespace Oxygen
         // load icon install prefix
         PathList out;
         char* path = 0L;
-        if( runCommand( "kde4-config --path icon", path ) && path )
+        if( (runCommand("kde4-config --path icon", path) ||
+             runCommand( "kf5-config --path icon", path)) && path )
         {
             out.split( path );
             g_free( path );

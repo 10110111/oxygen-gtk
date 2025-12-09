@@ -1,6 +1,6 @@
-project( oxygen-gtk )
+cmake_minimum_required(VERSION 3.10)
 
-cmake_minimum_required(VERSION 2.6)
+project( oxygen-gtk )
 
 ###########################
 # Define package generation
